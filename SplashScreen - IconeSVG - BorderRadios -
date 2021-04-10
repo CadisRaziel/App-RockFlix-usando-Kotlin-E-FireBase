@@ -1,0 +1,9 @@
+Iniciamos criando a splash screen -> tela que vai ter o ProgressBar(aquele icone de download que fica girando) e o logo por 3 segundos
+criamos um icone svg e adicionamos na tela de cadastro na action bar(toolbar)
+Observação: podemos alterar as cores dos icones svg caso for letra !!
+criamos uma nova tela(tela de login)
+
+colocando borderRadios no kotlin = va na pasta "drawable" e cloque com o botão direito em cima dela, selecione o "new" > "Drawable Resource File" > vamos criar um arquivo desenhavel, coloque o nome e no "Root Elemente" defina como "shape"
+apertando o OK ele cria um arquivo com o nome que voce definiu .xml
+dentro dele voce vai começar a colocar o codigo para fazer os campos de login e senha com border radios
+eu deixei comentarios nos layouts referente ao shape
