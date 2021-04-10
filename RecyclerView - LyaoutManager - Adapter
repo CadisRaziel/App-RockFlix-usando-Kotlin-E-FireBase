@@ -1,0 +1,20 @@
+usando RecyclerView = ao fazer a rolagem pra cima ou pra baixo os videos ou filmes que vao sumindo vao sendo excluidos temporariamente para nao pegar memoria ou acumular cache, isso faz com que o app nao fique pesado !
+
+layuout manager = lista em colunas(netflix), lista em vertical(youtube), lista na horizontal(spofty)
+
+adapter = retorna os dados(database) de uma lista(ou seja vamos adaptar os dados para uma lista 
+
+no build.gradle(app)
+nas dependencias inclua isso
+implementation 'androidx.recyclerview:recyclerview:1.2.0-beta01'
+
+
+depois de fazer isso
+com o botão direito clique sobre a pasta layout "new" > "Layout Resource File", Coloque um nome(lista_shows) e o root elemente troque ele coloque conforme voce precisa que o layout manager seja renderizado(esta na ali em cima a explicação do layout manager) no caso aqui vamos colocar linearLayout
+
+depois de criar o codigo do lista_shows com o botão direito crie sobre o a pasta com.example.rocflix(que esta na pasta java) "new" > "Package" e coloque no final .Model (ele vai criar uma pasta "Model" é aonde vai ficar nosso modelo de dados
+com o botão direito em cima da pasta Model "New" > "Kotlin class/file" e coloque um nome
+
+
+criando um adapter, com o botão direito clique sobre a pasta com.example.rockflix(que esta na pasta java) "new" > "Package" e coloque o nome de adapter(vai criar uma pasta com o nome adapter)
+com o botão direto nessa pasta "Adapter" clique em "new" > "Kotlin class/file" e coloque um nome
