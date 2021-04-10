@@ -1,0 +1,29 @@
+Firebase storage
+clique em primeiros passos para criar um storage
+
+podemos tanto colocar manualmente um arquivo nele, como podemos mandar um arquivo pra ele pelo codigo
+
+no curso vamos por manual no storage e recuperar as imagens/videos pelo app
+
+para buscar a imagem no servidor precisaremos da biblioteca "picasso"
+
+implementation 'com.squareup.picasso:picasso:2.71828'
+
+repare que ao deitar a tela o aplicativo fica todo desconfigurado pois nós não renderizamos para isso
+para evitar que o usuario rotacione a tela entra na pasta "Manifests" > "AndroidManifest.xml"
+
+
+e faça isso 
+antes tava assim: <activity android:name=".DetalhesShows"></activity>
+
+depois deixei assim:
+<activity android:name=".DetalhesShows" android:screenOrientation="portrait"></activity>
+
+podemos colocar o bloqueio de tela para qual quisermos android:screenOrientation="portrait"
+no nosso rockflix colocamos em todas as telas:
+
+ <activity android:name=".DetalhesShows" android:screenOrientation="portrait"></activity>
+        <activity android:name=".ListaDeShows" android:screenOrientation="portrait"/>
+        <activity android:name=".FormCadastro" android:screenOrientation="portrait"/>
+        <activity android:name=".FormLogin" android:screenOrientation="portrait"/>
+        <activity android:name=".MainActivity" android:screenOrientation="portrait">
