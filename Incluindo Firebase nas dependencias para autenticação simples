@@ -1,0 +1,50 @@
+Firebase
+Authentication = cadastro de usuarios
+cloud Firestone = banco de dados em tempo real(json)
+Realtime database = banco de dados em tempo real porém é me "nós"
+Storage = armazenamento de videos e imagens e arquivos
+
+
+faça o download do arquivo json que ele pede
+aperte ctrl + c   ctrl + v no arquivo e cole ele no projeto (no canto superior esquerdo tem o icone do android clique nele e clique em projeto e cole dentro da pasta "app")
+
+build.gradle(project)
+classpath 'com.google.gms:google-services:4.3.5'
+
+
+build.gradle(app)
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.gms.google-services'
+
+dependencies {
+implementation platform('com.google.firebase:firebase-bom:27.0.0')
+}
+
+
+
+depois de fazer isso tudo na pagina do firebase vai ter "Acessar a documentação" fica proximo a sua foto
+
+ao entrar nessa pagina clique no android e vai abrir outra pagina
+nela vai conter arquivos para configurar no android studio no caso uma biblioteca para autenticar o usuario
+e vamos usar ela : Authentication	com.google.firebase:firebase-auth-ktx	20.0.3
+implementation 'com.google.firebase:firebase-auth-ktx' = que no caso vai ficar assim
+cole isso no build.gradle(app) nas dependencias
+
+depois de sincronizar (sync)
+va na pagina do firebase e clique em "Authentication" > "Primeiros passos" 
+e escolha o metodo de autenticação veja que tem varios 
+e veja que ele libera o "users" então todo usuario cadastrado vai aparecer ai
+
+
+
+
+caso apareça esse erro
+Execution failed for task ':app:dataBindingMergeDependencyArtifactsDebug'. > This project uses AndroidX dependencies, but the 'android.useAndroidX' property is not enabled.
+um canal explicando como arrumar(https://www.youtube.com/watch?v=KOuV8jn5CTQ)
+
+coloque isso no "grandle.properties(project properties)
+
+
+caso der outros erros depois disso, veja o que fica em vermelho, passe o mouse por cima e va seguindo as orientações
+android.useAndroidX=true
+android.enableJetifier=true
