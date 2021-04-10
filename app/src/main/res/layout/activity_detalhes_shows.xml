@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--colocando um scrollview para podermos acessar todos os shows dessa tela-->
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+<!--repare que nao fechamos no xmlns só deixamos um >-->
+<!--nós fazemos o fechamento la em baixo, abaixo do layoutcoinstraint-->
+<!--para que o scroll pegue toda a tela-->
+
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black80"
+    tools:context=".DetalhesShows">
+
+<!--toolbar da tela Detalhes que vai conter um icone para voltar-->
+    <Toolbar
+        android:id="@+id/toolbarDetalhes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+<!--a imagem vamos pegar do servidor do firebase-->
+    <ImageView
+        android:id="@+id/capa"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:src="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/toolbarDetalhes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+<!--colocando a imagem Play.png no centro da capa(imageview acima)-->
+    <ImageView
+        android:id="@+id/PlayVideo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/play"
+        app:layout_constraintStart_toStartOf="@id/capa"
+        app:layout_constraintEnd_toEndOf="@id/capa"
+        app:layout_constraintTop_toTopOf="@id/capa"
+        app:layout_constraintBottom_toBottomOf="@id/capa"/>
+
+
+<!--colocando os detalhes Titulo-->
+    <TextView
+        android:id="@+id/Titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linkin Park Ao vivo"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/capa"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="5dp" />
+
+<!--colocando os detalhes Descrição (que vai estar no arquivo string.xml)-->
+<!--vamos adicionar o texto de detalhes e os compositores dentro da pasta "values" > "String.xml"-->
+<!--veja como passamos no "text" a string criada no arquivo strings.xml-->
+    <TextView
+        android:id="@+id/descricao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/descricao"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/Titulo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"/>
+
+<!-- colocando os integrantes da banda-->
+    <TextView 
+        android:id="@+id/txtIntegrantes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/integrantes"
+        android:textColor="@color/gray"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/descricao"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+    />
+
+<!--textview para mostrar "Mais Shows"-->
+    <TextView
+        android:id="@+id/txtMaisShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mais Shows"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/txtIntegrantes"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+/>
+
+<!--colocando a lista de filmes abaixo do "Mais Shows"-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RecyclerOutrosShows"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/txtMaisShow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_goneMarginTop="20dp"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+<!--aqui fazemos o fechamento do  scrollview-->

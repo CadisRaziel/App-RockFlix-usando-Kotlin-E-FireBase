@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "785458020787",
+    "project_id": "rockflix-b475f",
+    "storage_bucket": "rockflix-b475f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:785458020787:android:a1603bfbdf9d3c17e00bc6",
+        "android_client_info": {
+          "package_name": "com.example.rockflix"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "785458020787-tcditoeo0d1kkpb1v0q1tj6fcnlmmi3k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDljLi112fvVTCpYm5KgVleNJMqvtUsDJM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "785458020787-tcditoeo0d1kkpb1v0q1tj6fcnlmmi3k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
